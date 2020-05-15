@@ -1,0 +1,33 @@
+Sort.c
+We investigated the lines surrounding the seg-fault location by using the list function in gdb, and identified the issue with the variables i and j. Using the print function, we followed the i and j variables and realised that j was traversing the wrong way across the list.
+
+---------------------
+
+Queue.c
+
+When first running, fails when trying to add to queue. 
+
+We inserted a breakpoint at the enterQueue line. We discovered that the error occurs on the first(?) pass through the loop. 
+
+This lead us to investigate the queue length. When we ran 'list queueLength' we discovered that it is just a getter function that returns queue->size.
+
+We checked q2->size and found that it equalled 0 after adding the item to the queue, (which is not equal to i).
+
+The problem was that the enterQueue function did not increment queue size.
+--
+After solving this problem and running the program, our next error appeared to be an infinite loop when printing something. 
+
+We inserted a break function at the 'showQueue' call line as we assumed the infinite loop was in some sort of printing function. We still got the infinite loop, so we concluded that the error was in showQueue.
+
+We inserted a breakpoint at 'showQueue'
+After using the list command to view the code, we realised that curr was not movign to the next item, so the loop continued to print the first value in the queue.
+--
+Once we ran the program again, we reached Test 3, but the queues had not been printed properly: it only printed the first item of each. We now needed to determine whether the error was in the print or enter queue function.
+
+Upon further investigation of enterQueue, we realised that it didn't handle updating the tail and next pointer when the queue had 1 or more items.
+
+This solved our test 3 error as well, so obviously relied on enterQueue working correctly.
+--
+Test 5 should fail at line 75, however the error was a seg fault at 76, so something in the assert test is incorrect. 
+The issue here was that the function was checking whether the pointer was NULL, but not whether the valid pointer contained 0 items. We added a line 'assert q->size != 0' to overcome this problem.
+--

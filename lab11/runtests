@@ -1,0 +1,26 @@
+#!/bin/sh
+
+cat /dev/null > output
+
+size=5000
+
+for insert in L A B R S V
+do
+	for order in A P R
+	do
+      echo "" >> output
+	   echo "Test 1: ./tlab $size $order $insert 1" >> output
+	   echo "t" | ./tlab $size $order $insert 1 | grep -v Tree >> output
+
+      if [ $order = "R" ]
+      then
+         for i in {2..5}
+         do
+            echo "" >> output
+	         echo "Test $i: ./tlab $size $order $insert $i" >> output
+	         echo "t" | ./tlab $size $order $insert $i | grep -v Tree >> output
+         done
+      fi
+
+	done
+done

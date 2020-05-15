@@ -1,0 +1,18 @@
+Input   Initial Has Number  Avg Time    Avg Time
+Size    Order   Duplicates  of runs for usel    for sort
+5000    random  no  5   0.1512  0.0048
+5000    sorted  no  5   0.12    0.0032
+5000    reverse no  5   0.108   0.0056
+5000    random  yes 5   0.1432  0.0056
+5000    sorted  yes 5   0.1304  0.0056
+5000    reverse yes 5   0.1112  0.0048
+10000   random  no  5   0.4328  0.0192
+10000   sorted  no  5   0.3824  0.008
+10000   reverse no  5   0.2032  0.0064
+10000   random  yes 5   0.4096  0.0168
+10000   sorted  yes 5   0.3824  0.0112
+10000   reverse yes 5   0.2608  0.0112
+
+Summary
+Our function was faster when the items were in reversed order, and took the longest when they were in random order. When the items were in sorted order, the largest number was added to the end of the list, meaning that the loop went through the entire list to add the item. This explains the fastest results for reverse order. Duplicate items made no difference to the average time, as each item is tested individually. 
+Doubling the input size resulted in a 4x increase in time for our program, but the UNIX sort algorithm did not hold this relationship, suggesting it instead held an nlog(n) dependence on time.

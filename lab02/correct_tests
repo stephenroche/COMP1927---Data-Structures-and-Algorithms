@@ -1,0 +1,41 @@
+#!/bin/sh 
+
+./gen 100 R > tests/01
+./gen 100 A > tests/02
+./gen 100 D > tests/03
+./randnokey 100 | sort -R > tests/04
+./randnokey 100 | sort -n > tests/05
+./randnokey 100 | sort -nr > tests/06
+
+# all identical
+cat /dev/null > tests/07
+for t in {1..100}
+do 
+    echo 9 >> tests/07
+done
+
+#all identical except last
+cat /dev/null > tests/08
+for t in {1..100}
+do 
+    if [ $t -lt 100 ]
+    then
+        echo 9 >> tests/08
+    else 
+        echo 4 >> tests/08
+    fi
+done
+
+#all identical except first
+cat /dev/null > tests/09
+for t in {1..100}
+do 
+    if [ $t -gt 1 ]
+    then 
+        echo 9 >> tests/09
+    else
+        echo 4 >> tests/09
+    fi
+done
+
+# this doesn't include single item list and empty list tests

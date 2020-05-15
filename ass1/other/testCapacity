@@ -1,0 +1,80 @@
+#!/bin/sh
+
+
+# the relative location of the vlad executable
+# in this case it is one directory above
+VLAD=../vlad
+
+
+# 16 * 256 = 4096
+# 256 - 8 (for alloc header) = 248
+SIZE=248
+val=1
+
+
+TEST=/tmp/testCapacity.tst
+EXPECTED=/tmp/testCapacity.expected
+RESULTS=/tmp/testCapacity.results
+
+
+for i in $TEST $EXPECTED $RESULTS; do
+    if [ -a $i ]; then
+        rm $i
+    fi
+    touch $i
+done
+
+
+for j in {a..o}; do
+    # allocate and set values
+    echo + $j $SIZE >> $TEST
+    echo "*" $j $val >> $TEST
+
+
+    # compensate for annoying echo effect
+    echo + $j $SIZE >> $EXPECTED
+    echo "" >> $EXPECTED
+    echo "*" $j $val >> $EXPECTED
+    echo "" >> $EXPECTED
+    
+    val=$[ $val + 1 ]
+done
+
+
+#This should return "Failed to allocate %d bytes for ptr[q]"
+echo + q $SIZE >> $TEST
+# echo effect...
+echo + q $SIZE >> $EXPECTED
+echo "" >> $EXPECTED
+# expected result ...
+echo Failed to allocate $SIZE bytes for ptr[q] >> $EXPECTED
+
+
+#now read each var to ensure unaltered
+val=1
+
+
+for i in {a..o}; do
+    echo $ $i >> $TEST
+    # echo effect...
+    echo $ $i >> $EXPECTED
+    echo "" >> $EXPECTED
+    # expected result ...
+    echo $val >> $EXPECTED
+    val=$[ $val + 1 ]
+done
+
+
+#redirect both stderr and stdout to file
+$VLAD q < $TEST &> $RESULTS
+
+
+echo ==== RESULTS ====
+diff $EXPECTED $RESULTS
+echo =================
+
+
+# cleanup
+for i in $TEST $EXPECTED $RESULTS; do
+    rm $i
+done

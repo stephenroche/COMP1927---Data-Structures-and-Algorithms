@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cat /dev/null > logstable
+for i in {1..5}
+do 
+    ./randl 100 $i > stabletests/0$i
+
+    ./sortA < stabletests/0$i > stabletests/0$i.sortA
+    ./sortB < stabletests/0$i > stabletests/0$i.sortB
+    sort -n -k1,1 -s < stabletests/0$i > stabletests/0$i.stable
+
+    echo == Stability Test 0$i sortA == >> logstable
+    diff stabletests/0$i.sortA stabletests/0$i.stable >> logstable
+    echo == Stability Test 0$i sortB == >> logstable
+    diff stabletests/0$i.sortB stabletests/0$i.stable >> logstable
+done

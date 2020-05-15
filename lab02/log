@@ -1,0 +1,210 @@
+=== Testing for random input, no duplicates, size 100 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for sorted input, no duplicates, size 100 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for reverse input, no duplicates, size 100 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for random input, with duplicates, size 100 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for sorted input, with duplicates, size 100 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for reverse input, with duplicates, size 100 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for identical input, size 100 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for random input, no duplicates, size 1000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for sorted input, no duplicates, size 1000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for reverse input, no duplicates, size 1000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for random input, with duplicates, size 1000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for sorted input, with duplicates, size 1000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for reverse input, with duplicates, size 1000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for identical input, size 1000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for random input, no duplicates, size 10000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for sorted input, no duplicates, size 10000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for reverse input, no duplicates, size 10000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for random input, with duplicates, size 10000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for sorted input, with duplicates, size 10000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for reverse input, with duplicates, size 10000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for identical input, size 10000 ===
+0.00
+0.00
+0.00
+0.00
+0.00
+=== Testing for random input, no duplicates, size 100000 ===
+0.06
+0.09
+0.10
+0.12
+0.12
+=== Testing for sorted input, no duplicates, size 100000 ===
+0.09
+0.08
+0.09
+0.10
+0.09
+=== Testing for reverse input, no duplicates, size 100000 ===
+0.10
+0.10
+0.08
+0.08
+0.09
+=== Testing for random input, with duplicates, size 100000 ===
+0.06
+0.10
+0.05
+0.06
+0.06
+=== Testing for sorted input, with duplicates, size 100000 ===
+0.05
+0.09
+0.09
+0.05
+0.04
+=== Testing for reverse input, with duplicates, size 100000 ===
+0.05
+0.06
+0.09
+0.08
+0.08
+=== Testing for identical input, size 100000 ===
+0.09
+0.08
+0.08
+0.04
+0.08
+=== Testing for random input, no duplicates, size 1000000 ===
+0.77
+0.76
+0.86
+1.12
+0.78
+=== Testing for sorted input, no duplicates, size 1000000 ===
+0.74
+1.02
+0.86
+0.66
+0.54
+=== Testing for reverse input, no duplicates, size 1000000 ===
+0.56
+0.54
+0.52
+0.53
+1.02
+=== Testing for random input, with duplicates, size 1000000 ===
+0.72
+0.87
+0.87
+0.97
+0.78
+=== Testing for sorted input, with duplicates, size 1000000 ===
+0.54
+0.68
+0.70
+1.04
+0.56
+=== Testing for reverse input, with duplicates, size 1000000 ===
+0.52
+0.98
+0.61
+0.54
+0.54
+=== Testing for identical input, size 1000000 ===
+0.52
+0.52
+0.79
+0.76
+0.96

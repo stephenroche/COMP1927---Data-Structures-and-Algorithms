@@ -1,0 +1,10 @@
+#!/bin/bash
+echo ============ START OURS ============
+./myed text < tests > out1
+echo ============ START THEIRS ===========
+/home/cs1927/web/16s2/labs/week04/myed text < tests > out2
+echo 
+echo == diff == 
+diff out1 out2
+echo ============ END ============
+

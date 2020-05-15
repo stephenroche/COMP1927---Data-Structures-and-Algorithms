@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for t in {1..9}
+#for t in "ls tests/0?"
+do 
+    ./sortA < tests/0$t > tests/0$t.sorta
+    ./sortB < tests/0$t > tests/0$t.sortb
+    sort -n -s < tests/0$t > tests/0$t.expected
+
+    echo == Test 0$t A ==
+    diff tests/0$t.sorta tests/0$t.expected
+    echo == Test 0$t B ==
+    diff tests/0$t.sortb tests/0$t.expected
+done

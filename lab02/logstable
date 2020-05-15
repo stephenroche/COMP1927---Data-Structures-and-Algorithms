@@ -1,0 +1,412 @@
+== Stability Test 01 sortA ==
+== Stability Test 01 sortB ==
+4d3
+< 14    sad
+5a5
+> 14    sad
+7d6
+< 23    wht
+8a8
+> 23    wht
+14d13
+< 35    ace
+15a15
+> 35    ace
+17d16
+< 41    men
+18a18
+> 41    men
+28d27
+< 63    agu
+29a29
+> 63    agu
+31d30
+< 68    jji
+32a32
+> 68    jji
+39,40d38
+< 91    moq
+< 91    dwf
+41a40,41
+> 91    dwf
+> 91    moq
+44d43
+< 98    fwz
+45a45
+> 98    fwz
+59d58
+< 121    gml
+61c60
+< 122    yxl
+---
+> 121    gml
+62a62
+> 122    yxl
+69,70d68
+< 137    ach
+< 137    dru
+72c70,71
+< 141    ndq
+---
+> 137    dru
+> 137    ach
+73a73
+> 141    ndq
+79d78
+< 155    qvk
+80a80
+> 155    qvk
+85,87d84
+< 180    mzh
+< 180    xlo
+< 180    eto
+89c86,88
+< 183    pqf
+---
+> 180    eto
+> 180    xlo
+> 180    mzh
+90a90
+> 183    pqf
+92d91
+< 185    pay
+93a93
+> 185    pay
+96d95
+< 194    sjy
+97a97
+> 194    sjy
+99d98
+< 197    juu
+100a100
+> 197    juu
+== Stability Test 02 sortA ==
+== Stability Test 02 sortB ==
+2d1
+< 3    yqt
+3a3
+> 3    yqt
+6,7d5
+< 10    gve
+< 10    yqc
+8a7,8
+> 10    yqc
+> 10    gve
+11d10
+< 19    enn
+12a12
+> 19    enn
+14d13
+< 24    gis
+15a15
+> 24    gis
+18d17
+< 34    hgo
+19a19
+> 34    hgo
+23d22
+< 52    uzp
+24a24
+> 52    uzp
+29d28
+< 61    nwx
+30a30
+> 61    nwx
+35d34
+< 91    rsl
+36a36
+> 91    rsl
+45d44
+< 109    fso
+46a46
+> 109    fso
+53d52
+< 120    bub
+54a54
+> 120    bub
+61d60
+< 140    ojy
+62a62
+> 140    ojy
+68d67
+< 153    itt
+70,71c69
+< 158    gyp
+< 158    sbq
+---
+> 153    itt
+72a71,72
+> 158    sbq
+> 158    gyp
+77d76
+< 170    rnb
+78a78
+> 170    rnb
+82d81
+< 181    dtz
+83a83
+> 181    dtz
+87,88d86
+< 187    lzy
+< 187    uxb
+90c88,89
+< 190    vtp
+---
+> 187    uxb
+> 187    lzy
+91a91
+> 190    vtp
+95d94
+< 198    yvd
+97c96
+< 199    jqm
+---
+> 198    yvd
+99c98
+< 200    ifg
+---
+> 199    jqm
+100a100
+> 200    ifg
+== Stability Test 03 sortA ==
+== Stability Test 03 sortB ==
+12,13d11
+< 36    baw
+< 36    zpk
+14a13,14
+> 36    zpk
+> 36    baw
+21d20
+< 49    atr
+22a22
+> 49    atr
+24d23
+< 54    zsy
+25a25
+> 54    zsy
+27,29d26
+< 64    ymq
+< 64    vkg
+< 64    ajy
+31c28,30
+< 65    ffm
+---
+> 64    ajy
+> 64    vkg
+> 64    ymq
+32a32
+> 65    ffm
+41,42d40
+< 89    khh
+< 89    vrv
+43a42,43
+> 89    vrv
+> 89    khh
+45d44
+< 95    ibw
+46a46
+> 95    ibw
+48d47
+< 102    nnz
+49a49
+> 102    nnz
+52d51
+< 105    tka
+54c53
+< 107    iil
+---
+> 105    tka
+55a55
+> 107    iil
+59d58
+< 115    lzq
+61c60
+< 116    kyo
+---
+> 115    lzq
+62a62
+> 116    kyo
+65d64
+< 123    his
+66a66
+> 123    his
+71d70
+< 136    mnx
+72a72
+> 136    mnx
+78d77
+< 145    qmp
+79a79
+> 145    qmp
+82d81
+< 148    ahs
+83a83
+> 148    ahs
+== Stability Test 04 sortA ==
+== Stability Test 04 sortB ==
+2,3d1
+< 7    aop
+< 7    fzo
+4a3,4
+> 7    fzo
+> 7    aop
+10d9
+< 27    pdn
+11a11
+> 27    pdn
+14d13
+< 37    lny
+15a15
+> 37    lny
+17d16
+< 43    eza
+18a18
+> 43    eza
+29,30d28
+< 68    hld
+< 68    sju
+31a30,31
+> 68    sju
+> 68    hld
+37d36
+< 81    jgq
+38a38
+> 81    jgq
+40d39
+< 85    dpx
+41a41
+> 85    dpx
+46d45
+< 92    tmd
+47a47
+> 92    tmd
+51d50
+< 101    ydn
+53c52
+< 102    mgx
+---
+> 101    ydn
+54a54
+> 102    mgx
+59d58
+< 117    dqk
+60a60
+> 117    dqk
+65d64
+< 134    xlf
+67c66
+< 139    xgm
+---
+> 134    xlf
+68a68
+> 139    xgm
+72d71
+< 148    wvb
+74c73
+< 149    nsl
+---
+> 148    wvb
+75a75
+> 149    nsl
+79d78
+< 159    qym
+80a80
+> 159    qym
+82d81
+< 165    elm
+83a83
+> 165    elm
+87d86
+< 174    ams
+88a88
+> 174    ams
+90d89
+< 181    esr
+91a91
+> 181    esr
+95,96d94
+< 190    buf
+< 190    oej
+97a96,97
+> 190    oej
+> 190    buf
+== Stability Test 05 sortA ==
+== Stability Test 05 sortB ==
+3d2
+< 15    ugo
+4a4
+> 15    ugo
+7d6
+< 26    dqb
+8a8
+> 26    dqb
+10,11d9
+< 34    jmr
+< 34    zbi
+12a11,12
+> 34    zbi
+> 34    jmr
+14d13
+< 36    sck
+15a15
+> 36    sck
+20,21d19
+< 51    pda
+< 51    ytm
+23c21,22
+< 53    qhh
+---
+> 51    ytm
+> 51    pda
+24a24
+> 53    qhh
+40d39
+< 85    dtl
+41a41
+> 85    dtl
+45d44
+< 92    clx
+46a46
+> 92    clx
+60d59
+< 129    oig
+61a61
+> 129    oig
+63d62
+< 132    ypf
+65,66c64
+< 133    tdh
+< 133    nlz
+---
+> 132    ypf
+67a66,67
+> 133    nlz
+> 133    tdh
+69d68
+< 135    laf
+71c70
+< 139    zoe
+---
+> 135    laf
+73c72
+< 140    xgj
+---
+> 139    zoe
+74a74
+> 140    xgj
+86d85
+< 171    aau
+88,89c87
+< 172    bwi
+< 172    szx
+---
+> 171    aau
+90a89,90
+> 172    szx
+> 172    bwi
+96,97d95
+< 196    ljm
+< 196    vwl
+98a97,98
+> 196    vwl
+> 196    ljm

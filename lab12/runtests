@@ -1,0 +1,12 @@
+#!/bin/sh
+
+cat /dev/null > output
+
+#for htsize in 85711 100000 214283 400000 400837 857144 857137
+for htsize in 100000 10000 1000 100 10
+do
+	echo "" >> output
+	echo "" >> output
+	echo "Test for hash table size $htsize: ./mkwords 1000000 3 | ./words - $htsize" >> output
+	./mkwords 1000000 3 | ./words - $htsize >> output
+done

@@ -1,0 +1,39 @@
+Results for Tests on 5000 values
+
+Depth = depth of tree, Cost = average #comparisons per search
+
+
+             Ascending Order        Prefix Order        Random Order
+Insert
+Method       Depth      Cost     Depth      Cost     Depth      Cost
+
+L         ____5000  ____3114  ______13  ______12  ______28  ______16
+
+A         ____5000  ____1887  ____2954  ____1115  ______28  ______16
+
+R         ____2492  _____952  ____1774  _____674  ______27  ______15
+
+B         _____204  ______62  ______20  ______14  ______23  ______13
+
+S         ____4999  ______24  ____3977  ______23  ______31  ______23
+
+V         ______13  ______12  ______14  ______12  ______15  ______12
+
+
+Notes (what the above indicates):
+
+Both Leaf and At-root insertion methods give a worst-case depth with ascending/descending ordered inputs as each new node will be inserted to the same side of the node preceding it. They both have average performance with random ordered inputs, but as Prefix Order is optimised for adding from the leaves, prefix ordered inputs produce much more balanced trees with Leaf insertion rather than At-root.
+
+The difference in search cost for ascending input between the L and A insertion methods is just because L gives a linked list in ascending order whereas A gives a linked list in descending order.
+
+Random insertion is generally bad, but no worse than most of the others at dealing with randomly ordered input. It deals with ascending inputs better than either L or A as only 1 in 2 of the new largest numbers in the tree are added at the root to the top right of the growing spine, resulting in a depth approximately half that of the worst-case L or A scenarios.
+
+   Note: all the values on the left hand 'spine' of the tree were added via A insertion, while the values on the linear branches extending out to the right were added via L insertion.
+
+Rebalancing generally works well for random and prefix inputs, as the rebalancing process rearranges prefix inputs enough to make them like-random. Its performance is less good for ascending input in terms of tree depth and searching cost, indicating that the periodicity of the rebalancing process isn't frequent enough to completely nullify the effect of the ordered input.
+
+The Splay Tree approach has the property that recently accessed elements are moved to the top of the tree so that they are quick to access again. This means that although they have close to worst case tree depth originally with Ascending or Prefix input, the searching process significantly rearranges the tree, resulting in final tree depths of 33 and 29 respectively and much improved search times.
+
+The AVL Tree approach is also a self-balancing tree like the Splay Tree, except that the rebalancing process occurs while the tree is being built rather than during searching. Therefore the tree depth before searching is almost completely minimised, and the search cost is minimised for all 6666 searches rather than only the later ones after the tree has been rearranged, as for Splay Trees.
+
+In general randomly ordered inputs gave good tree depth and search cost as it's difficult for any reasonable insertion algorithm to generate a worst-case scenario with random input.

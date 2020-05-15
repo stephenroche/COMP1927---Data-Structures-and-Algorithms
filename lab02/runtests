@@ -1,0 +1,55 @@
+#!/bin/sh
+
+cat /dev/null > log
+for size in 100 1000 10000 100000 1000000
+do
+    #No duplicates
+	for order in random sorted reverse
+	do
+		echo === Testing for $order input, no duplicates, size $size === >> log
+		for i in {1..5}
+		do
+			case $order in
+			random) flag="R" ;;
+			sorted) flag="A" ;;
+			reverse) flag="D" ;;
+			esac
+			{ ./gen $size $flag | /usr/bin/time --format="%U" ./sortB > /dev/null ; } 2>> log
+            #echo "" >> log
+		done
+	done
+
+    #With duplicates
+    for order in random sorted reverse
+	do
+		echo === Testing for $order input, with duplicates, size $size === >> log
+		for i in {1..5}
+		do
+			case $order in
+			random) flag="R" ;;
+			sorted) flag="n" ;;
+			reverse) flag="nr" ;;
+			esac
+			{ ./randnokey $size | sort -$flag | /usr/bin/time --format="%U" ./sortB > /dev/null ; } 2>> log
+            #echo "" >> log
+		done
+	done
+
+    #Identical
+    echo === Testing for identical input, size $size === >> log
+    for i in {1..5}
+	do
+		{ ./identical $size | /usr/bin/time --format="%U" ./sortB > /dev/null ; } 2>> log
+        #echo "" >> log
+	done
+
+    #Top
+    #echo === Testing for top input, size $size === >> log
+    for i in #{1..5}
+	do
+		{ ./top $size | /usr/bin/time --format="%U" ./sortB > /dev/null ; } 2>> log
+        #echo "" >> log
+	done
+
+    #echo "" >> log
+done
